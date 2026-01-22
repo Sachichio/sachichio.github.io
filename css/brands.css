@@ -78,17 +78,17 @@ kotak {
 /* Brand Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/* Desugami */
+/* Sacchio */
 .button.button-sacchio {
   color: #ffffff;
-  background-color: rgb(97, 64, 245);
+  background-color: #5c4b99;
 }
 .button.button-sacchio:hover,
 .button.button-sacchio:focus {
   filter: brightness(90%);
 }
 
-/* Desumanga */
+/* Youtube */
 .button.button-youtube {
   color: #fff;
   background-color: #d13c3c;
@@ -128,13 +128,13 @@ kotak {
   filter: brightness(90%);
 }
 
-/* Linkiee */
-.button.button-linkiee {
+/* Lit.link */
+.button.button-lit {
   color: #ffffff;
   background-color: #288bd1;
 }
-.button.button-linkiee:hover,
-.button.button-linkiee:focus {
+.button.button-lit:hover,
+.button.button-lit:focus {
   filter: brightness(90%);
 }
 
