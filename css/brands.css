@@ -129,12 +129,12 @@ kotak {
 }
 
 /* Lit.link */
-.button.button-lit {
+a.button.button-lit {
   color: #ffffff;
-  background-color: #25D1DA;
+  background-color: #288bd1;
 }
-.button.button-lit:hover,
-.button.button-lit:focus {
+a.button.button-lit:hover,
+a.button.button-lit:focus {
   filter: brightness(90%);
 }
 
