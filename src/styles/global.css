@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sacchio: #5c4b99;
+  --color-youtube: #d13c3c;
+  --color-heylink: #363d7f;
+  --color-linktree: #3cb063;
+  --color-carrd: #71A2EB;
+  --color-litlink: #288bd1;
+  --color-paradigma: #4C7397;
+  --color-darkblue: #1F2544;
+  --color-bodybg: #535C91;
+  --color-headbg: #2972a2;
+}
+
+@layer utilities {
+  .btn {
+    @apply inline-block w-full max-w-[300px] text-center font-bold text-lg px-3 py-4 rounded-xl transition-all duration-300 outline-none hover:brightness-110 hover:scale-105 hover:-translate-y-1 hover:shadow-lg focus:ring-4 focus:ring-blue-300 mx-auto;
+  }
+  .btn-sacchio {
+    @apply bg-sacchio text-white;
+  }
+  .btn-paradigma {
+    @apply bg-paradigma text-white;
+  }
+  .btn-youtube {
+    @apply bg-youtube text-white;
+  }
+  .btn-instagram {
+    @apply text-white;
+    background-image: linear-gradient(-135deg, #1400c8, #b900b4, #f50000);
+  }
+  .btn-heylink {
+    @apply bg-heylink text-white;
+  }
+  .btn-linktree {
+    @apply bg-linktree text-white;
+  }
+  .btn-carrd {
+    @apply bg-carrd text-white;
+  }
+  .btn-litlink {
+    @apply bg-litlink text-white;
+  }
+  
+  .container-card {
+    @apply relative w-full max-w-[600px] text-center mx-auto px-6 py-12 bg-white/95 backdrop-blur-sm rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/20 animate-fade-in-up;
+  }
+
+  .badan-question {
+    @apply bg-darkblue/95 backdrop-blur-md border-[3px] border-white/80 min-h-[100px] mb-4 text-justify overflow-hidden rounded-2xl leading-relaxed p-6 text-gray-100 hover:overflow-y-auto shadow-inner transition-colors duration-300 hover:border-white;
+    scrollbar-width: thin;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-gradient-bg {
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

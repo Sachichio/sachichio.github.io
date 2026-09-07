@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="404 Not Found | Sacchio Official Website" noindex={true}>
+	<div class="container-card !mt-[60px] !py-[50px]">
+        <div class="flex flex-col items-center">
+            <img src="/images/sacchio.jpg" class="w-[100px] h-[100px] object-cover object-center rounded-full mb-5 border-4 border-white shadow-[0_4px_10px_rgba(0,0,0,0.1)]" alt="SACCHIO.COM">
+            <h1 class="text-[100px] font-extrabold leading-none text-blue-600 m-0">404</h1>
+            <h2 class="mt-2.5 font-bold text-gray-800 text-[32px]">Oops! Tersesat?</h2>
+            
+            <p class="text-gray-600 text-[18px] mb-10 leading-[1.6]">
+                Maaf, halaman yang Anda cari tidak ada atau mungkin sudah dipindahkan.<br>
+                Jangan khawatir, mari kita kembali ke jalan yang benar!
+            </p>
+            
+            <a class="btn btn-sacchio !w-auto !px-10 !rounded-full !text-base tracking-wide" href="/" rel="noopener" role="button">Kembali ke Beranda</a>
+        </div>
+	</div>
+</Layout>

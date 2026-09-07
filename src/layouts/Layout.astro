@@ -1,0 +1,84 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+    favicon?: string;
+    url?: string;
+    image?: string;
+    type?: string;
+    personName?: string;
+    noindex?: boolean;
+}
+
+const { 
+    title, 
+    description = "Hello, My name is Sacchio Alfonso Agustian. Welcome to my website.",
+    favicon = "/images/sacchio.jpg",
+    url = "https://sacchio.com",
+    image = "https://sacchio.com/images/sacchio.jpg",
+    type = "website",
+    personName = "Sacchio Alfonso Agustian",
+    noindex = false
+} = Astro.props;
+
+// Schema.org JSON-LD
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": type === "profile" ? "Person" : "WebSite",
+  "name": personName,
+  "url": url,
+  "image": image,
+  "description": description,
+  "sameAs": [
+    "https://www.youtube.com/@Sacchio",
+    "https://www.instagram.com/sacchio_a/",
+    "https://x.com/sacchio_a",
+    "https://www.linkedin.com/in/sacchio/"
+  ]
+};
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href={favicon} />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="robots" content={noindex ? "noindex" : "index, follow"} />
+		<meta name="google-site-verification" content="8Vx2EV_2jIb7CgSaISorwpIU5cdSKsC3StCyM-MSPkA" />
+		
+        <!-- Primary Meta Tags -->
+        <title>{title}</title>
+        <meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="author" content="Sacchio" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content={type} />
+        <meta property="og:url" content={url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={image} />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+	
+        <!-- Schema.org -->
+        <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)} />
+    </head>
+	<body class="bg-bodybg text-gray-800 font-['Open_Sans'] min-h-screen py-10 px-4 flex flex-col items-center justify-center overflow-x-hidden">
+        <div class="fixed inset-0 z-[-1] bg-gradient-to-br from-[#535C91] via-[#29325c] to-[#1F2544] animate-gradient-bg"></div>
+		<slot />
+	</body>
+</html>
