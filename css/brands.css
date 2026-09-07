@@ -88,6 +88,16 @@ kotak {
   filter: brightness(90%);
 }
 
+/* Paradigma Kehidupan */
+.button.button-paradigma {
+  color: #ffffff;
+  background-color: #4C7397;
+}
+.button.button-paradigma:hover,
+.button.button-paradigma:focus {
+  filter: brightness(90%);
+}
+
 /* Youtube */
 .button.button-youtube {
   color: #fff;
