@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Berjalan setiap 3 hari sekali pada jam 17:00 UTC (yang setara dengan jam 00:00 WIB / 12 malam)
+    - cron: '0 17 */3 * *'
 
 permissions:
   contents: read
